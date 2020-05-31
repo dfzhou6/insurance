@@ -17,9 +17,8 @@ class CreateInsurancesTable extends Migration
             $table->bigIncrements('id');
             $table->string('city');
             $table->string('type');
-            $table->string('title');
-            $table->text('content');
-            $table->integer('price');
+            $table->string('price_range');
+            $table->text('extra');
             $table->timestamps();
         });
     }

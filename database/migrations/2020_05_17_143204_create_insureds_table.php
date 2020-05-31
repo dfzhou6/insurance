@@ -18,8 +18,10 @@ class CreateInsuredsTable extends Migration
             $table->bigInteger('user_id');
             $table->string('name');
             $table->string('idcard');
-            $table->string('number');
             $table->string('phone');
+            $table->string('insurance_city');
+            $table->string('insurance_type');
+            $table->integer('insurance_price');
             $table->text('extra');
             $table->timestamps();
             $table->timestamp('deleted_at')->nullable();

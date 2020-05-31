@@ -16,12 +16,12 @@ class CreateInsureOrdersTable extends Migration
         Schema::create('insure_orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
-            $table->bigInteger('insured_id');
-            $table->bigInteger('insurance_id');
-            $table->bigInteger('asset_id');
-            $table->string('pay_id')->nullable();
+            $table->string('pay_num')->nullable();
+            $table->integer('service_price');
             $table->integer('insurance_price');
-            $table->integer('asset_price');
+            $table->text('snap_insured');
+            $table->string('start_month');
+            $table->string('end_month');
             $table->tinyInteger('status');
             $table->timestamps();
         });

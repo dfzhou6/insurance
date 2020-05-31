@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+// 第三方登录
+Route::post('socials/{social_type}/authorizations', 'AuthorizationsController@socialStore')
+    ->where('social_type', 'weixin')
+    ->name('socials.authorizations.store');
